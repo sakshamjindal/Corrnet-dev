@@ -1,0 +1,16 @@
+# ignore __pycache__ directories
+__pycache__
+
+# ignore .pyc files
+*.pyc
+
+# ignore .DS_Store files
+global-exclude .DS_Store
+
+# ignore log directories
+tb_logs/*
+lightning_logs/*
+tb_logs_debug/*
+
+# ignore model checkpoints
+*.h5

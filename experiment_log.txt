@@ -1,0 +1,62 @@
+
+1a.
+p matrix - align with labek 
+supervised + unsupervised
+supervised - mse loss
+unsupervised
+
+1b. p_matrix --> p_matrix.T
+-------------------------------------------------
+2a
+p_matrix align with label
+supervised changed to batch frobenium norm
+sl -1.0, rank-1.0, manifold -0.1
+
+2b. 
+p_matrix -> p_matrix.T
+
+-------------------------------------------------
+3a
+p_matrix align with label
+supervised changed to batch frobenium norm
+sl-1.0, rank-0.01, manifold -0.01
+
+3a
+p_matrix -> p_matrix.T
+supervised changed to batch frobenium norm
+sl-1.0, rank-0.01, manifold -0.01
+
+----------------------------------------------------
+4a
+p_matrix align with label
+supervised changed to batch frobenium norm
+scale to 5000 epochs
+sl-1.0, rank-0.01, manifold -0.01
+
+----------------------------------------------------
+6a
+p_matrix align with label
+supervised changed to cross entropy
+scale to 5000 epochs
+sl-1.0, rank-0.01, manifold -0.01
+
+----------------------------------------------------
+7a
+p_matrix align with label
+unsupervised
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-0.0, rank-0.1, manifold -0.01
+
+Obs: unsupervised loss going down but supervised loss going up
+
+7b
+p_matrix -> p_matrix.T
+
+-----------------------------------------------------------------
+8a
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-0.1, rank-0.1, manifold -0.01
