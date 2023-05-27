@@ -41,6 +41,7 @@ scale to 5000 epochs
 sl-1.0, rank-0.01, manifold -0.01
 
 ----------------------------------------------------
+unsupervised
 7a
 p_matrix align with label
 unsupervised
@@ -55,8 +56,74 @@ p_matrix -> p_matrix.T
 
 -----------------------------------------------------------------
 8a
+unsupervised + supervised (regularising)
+`python acid_corrnet3d_clean.py --gpu=1 --batch_size=8 --exp_name="5pc_8a" --object_count=5`
 p_matrix align with label
 unsupervised + supervised (here use supervised only as a regularising factor)
 supervised changed to batch frobenium norm but no contribution
 scale to 5000 epochs
 sl-0.1, rank-0.1, manifold -0.01
+
+-----------------------------------------------------------------
+9a
+unsupervised + supervised (regularising but with 10x strength)
+`python acid_corrnet3d_clean.py --gpu=2 --batch_size=8 --exp_name="5pc_9a" --object_count=5`
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor but increase regularising effect)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-1.0, rank-0.1, manifold -0.01
+
+-----------------------------------------------------------------
+9a
+unsupervised + supervised (regularising but with 10x strength)
+`python acid_corrnet3d_clean.py --gpu=2 --batch_size=8 --exp_name="5pc_9a" --object_count=5`
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor but increase regularising effect)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-1.0, rank-0.1, manifold -0.01, recon - 0.1
+
+-----------------------------------------------------------------
+10a
+unsupervised + supervised (regularising but with 10x strength and rankloss coeff to 0.01)
+`python acid_corrnet3d_clean.py --gpu=1 --batch_size=8 --exp_name="5pc_10a" --object_count=5`
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor but increase regularising effect)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-1.0, rank-0.01, manifold -0.01
+
+-----------------------------------------------------------------
+11a
+unsupervised + supervised (regularising but with 100x strength and rankloss coeff to 0.01, recon coeff to 0.1)
+`python acid_corrnet3d_clean.py --gpu=0 --batch_size=8 --exp_name="5pc_11a" --object_count=5`
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor but increase regularising effect)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-1.0, rank-0.01, manifold -0.01, recon - 0.1
+
+-----------------------------------------------------------------
+12a
+repeat of 10a but with 300 objects
+unsupervised + supervised (regularising but with 10x strength and rankloss coeff to 0.01)
+`python acid_corrnet3d_clean.py --gpu=2 --batch_size=8 --exp_name="5pc_12a" --object_count=300`
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor but increase regularising effect)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-1.0, rank-0.01, manifold -0.01 recon - 1.0
+
+-----------------------------------------------------------------
+13a
+repeat of 11a but with 300 objects
+unsupervised + supervised (regularising but with 100x strength and rankloss coeff to 0.01, recon coeff to 0.1)
+`python acid_corrnet3d_clean.py --gpu=1 --batch_size=8 --exp_name="5pc_13a" --object_count=300`
+p_matrix align with label
+unsupervised + supervised (here use supervised only as a regularising factor but increase regularising effect)
+supervised changed to batch frobenium norm but no contribution
+scale to 5000 epochs
+sl-1.0, rank-0.01, manifold -0.01, recon - 0.1
+
+

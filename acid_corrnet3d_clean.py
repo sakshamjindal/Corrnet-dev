@@ -165,9 +165,9 @@ class LitCorrNet3D(pl.LightningModule):
         self.enc_glb_dim = enc_glb_dim
         self.dec_in_dim = enc_glb_dim + 3
         self.rec_coeff = 1.0 #ls_coeff[0]
-        self.rank_coeff = 0.1
+        self.rank_coeff = 0.01
         self.mfd_coeff = 0.01
-        self.sl_coeff = 0.1
+        self.sl_coeff = 1.0
         self.k_nn = k_nn
         
         self.encoder  = Encoder(self.enc_emb_dim, self.enc_glb_dim, self.k_nn)
